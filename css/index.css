@@ -1,0 +1,148 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    grid-template-areas:
+    "text image";
+    text-orientation: sideways;
+
+    background-image: url("../images/Studio.jpg");
+    background-repeat: none;
+    background-size: cover;
+}
+
+header {
+    background: #2C3930;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+header h1{
+}
+
+.fadelayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    display: none;
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.fadelayer.visible {
+    visibility: visible;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;
+}
+
+@media screen and (min-width: 800px) {
+
+    .menu {
+        /* display: ; */
+        text-align: center;
+    }
+
+    /* .menu-toggle div {
+        display: none;
+    } */
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
+    transition: 0.3s;
+}
+
+.menu-toggle div {
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    transition: 0.3s;
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+    z-index: 2;
+    visibility: hidden;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+
+.menu a:hover {
+    background-color: #575757;
+}
+
+.menu.open {
+    visibility: visible;
+    left: 0;
+    display: block;
+}
+
+.main {
+    margin-top: 3em;
+    margin-left: 3em;
+    margin-right: 3em;
+    /* margin-bottom: 3em; */
+    border: 5%;
+    
+    /* width: 10em; */
+    display: grid;
+    background-color: white;
+    border-radius: 20px;
+    border-color: white;
+    text-align: center;
+    justify-content: end;
+}
+
+.fill {
+    height:10em;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    background-color: #2C3930;
+    position:relative;
+    text-align:center;
+    display: box;
+    width: 100%;
+    margin-top: 7em;
+    bottom:0px;
+    padding-bottom: 3em;
+    padding-top:0.5em;
+}
+
+footer.p {
+    color: #fff;
+}
