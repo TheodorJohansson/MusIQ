@@ -8,7 +8,7 @@ body {
     text-orientation: sideways;
 
     background-image: url("../images/Studio.jpg");
-    background-repeat: none;
+
     background-size: cover;
 }
 
@@ -114,7 +114,7 @@ header h1{
     margin-left: 3em;
     margin-right: 3em;
     /* margin-bottom: 3em; */
-    border: 5%;
+    
     
     /* width: 10em; */
     display: grid;
@@ -135,7 +135,7 @@ footer {
     background-color: #2C3930;
     position:relative;
     text-align:center;
-    display: box;
+    /* display: box; */
     width: 100%;
     margin-top: 7em;
     bottom:0px;
